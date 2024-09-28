@@ -83,9 +83,9 @@ class PeopleActivity : AppCompatActivity(), PersonAdapter.OnItemClickListener {
         // Make the request and receive the values
         val request = randomUserService.getUsers(count)
 
-        request.enqueue(object : Callback<ApiResponse>{
+        request.enqueue(object : Callback<ApiResponse>{ // Enqueue the answer to successfully be executed asynchronously
             override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
-                if (response.isSuccessful){
+                if (response.isSuccessful){ // Check if is successfully
                     val userApiUsers: ApiResponse = response.body()!!
 
                     val personList = mutableListOf<Person>()
