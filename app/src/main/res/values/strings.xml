@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">friendsPy</string>
+    <string name="favorite">Favorite</string>
+    <string name="people">People</string>
+    <string name="load">Load</string>
+    <string name="result">Result</string>
+    <string name="_2">2</string>
+    <string name="add_a_friend">Add a friend</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="name">Name</string>
+</resources>
