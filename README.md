@@ -18,11 +18,15 @@ FriendSpy is an Android application that uses Retrofit to fetch random user data
 ## Screenshots
 
 ![Main_Activity](https://i.imgur.com/VmIIH5f.png)
+<br>
 **Main Activity**
 
-![People List Activity](https://i.imgur.com/piAYmrL.png)
-**People Activity**
+<br>
 
+![People List Activity](https://i.imgur.com/piAYmrL.png)
+<br>
+**People Activity**
+<br>
 ## Installation
 
 1. Clone the repository:
