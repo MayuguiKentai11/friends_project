@@ -88,7 +88,7 @@ class PeopleActivity : AppCompatActivity(), PersonAdapter.OnItemClickListener {
                 if (response.isSuccessful){ // Check if is successfully
                     val userApiUsers: ApiResponse = response.body()!!
 
-                    val personList = mutableListOf<Person>()
+                    val personList = mutableListOf<Person>() // List of Native Kotlin
 
                     userApiUsers.results?.forEach{
                         personList.add(it.toPerson())
@@ -109,10 +109,13 @@ class PeopleActivity : AppCompatActivity(), PersonAdapter.OnItemClickListener {
 
 
     override fun onItemClick(person: Person) {
+        // Get an instance of the database and retrieve the DAO (Data Access Object)
         val dao= AppDatabase.getInstance(this).getDao()
 
+        // Insert the selected person into the database
         dao.insertOne(person)
 
-        Toast.makeText(this, "Person " + person.firstName + "added to the friend list", Toast.LENGTH_SHORT).show()
+
+        Toast.makeText(this, person.firstName + " " + person.lastName + " added to the friend list", Toast.LENGTH_SHORT).show()
     }
 }
